@@ -1,19 +1,30 @@
-import { ReactNode } from "react";
+"use client";
+import { ReactNode, useState } from "react";
 
 export type NewsletterSectionProps = {
   title: string;
+  onSubmit: (email: string) => void;
 };
 
 export const NewsletterSection = ({
   title,
+  onSubmit,
 }: NewsletterSectionProps): ReactNode => {
+  const [email, setEmail] = useState("");
+
   return (
     <div className="bg-indigo-700 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
         <h2 className="max-w-xl text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:col-span-7">
           {title}
         </h2>
-        <form className="w-full max-w-md lg:col-span-5 lg:pt-2">
+        <form
+          className="w-full max-w-md lg:col-span-5 lg:pt-2"
+          onSubmit={(e) => {
+            e.preventDefault();
+            onSubmit(email);
+          }}
+        >
           <div className="flex gap-x-4">
             <label htmlFor="email-address" className="sr-only">
               Email address
@@ -23,6 +34,8 @@ export const NewsletterSection = ({
               name="email"
               type="email"
               required
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
               placeholder="Entrez votre adresse email"
               autoComplete="email"
               className="min-w-0 flex-auto rounded-md bg-white/10 px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-white/75 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6"

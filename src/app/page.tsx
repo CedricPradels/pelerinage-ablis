@@ -1,7 +1,38 @@
+"use client";
+
+import { faqs } from "@/app/faqs";
+import { FAQ_URL } from "@/app/constants";
+import { FAQ } from "@/components/FAQ";
+import { HeroSection } from "@/components/HeroSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+
 export default function Home() {
   return (
-    <main>
-      <div>Hello world!</div>
-    </main>
+    <div className="bg-white">
+      <main>
+        <HeroSection
+          title="Pélerinage du groupement paroissial d'Ablis"
+          description="Une journée pour marcher ensemble, prier ensemble, avancer ensemble vers la Cathédrale Saint-Louis de Versailles.
+Que vous soyez jeune ou moins jeune, sportif ou contemplatif, venez vivre ce temps fort de foi et de fraternité à travers l’un des trois parcours accessibles à tous."
+          pictureSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Cath%C3%A9drale_Saint_Louis_-_Versailles_%28FR78%29_-_2024-06-08_-_16.jpg/1920px-Cath%C3%A9drale_Saint_Louis_-_Versailles_%28FR78%29_-_2024-06-08_-_16.jpg"
+          pictureAlt="Cathédrale Saint-Louis"
+          mainActionTitle="S'inscrire"
+          secondaryActionTitle="Voir la FAQ"
+          secondaryActionHref={FAQ_URL}
+        />
+        <NewsletterSection
+          title="Besoin de rester informé ? Inscrivez-vous a la newsletter."
+          onSubmit={() => alert("Dev en cours")}
+        />
+        <FAQ
+          title="Foire aux questions"
+          entries={faqs}
+          titleHref={FAQ_URL}
+          titleId={
+            FAQ_URL.substring(1) // remove #
+          }
+        />
+      </main>
+    </div>
   );
 }
