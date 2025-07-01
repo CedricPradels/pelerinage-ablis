@@ -47,6 +47,11 @@ export const NewsletterSection = ({
               S&apos;inscrite
             </button>
           </div>
+
+          <p className="mt-4 text-sm/6 text-gray-300">
+            Votre email sera uniquement utilisé pour l&apos;envoi
+            d&apos;informations relative au pèlerinage
+          </p>
         </form>
       </div>
     </div>
