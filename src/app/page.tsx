@@ -1,10 +1,8 @@
 "use client";
-
 import { faqs } from "@/app/faqs";
 import { FAQ_URL } from "@/app/constants";
 import { FAQ } from "@/components/FAQ";
 import { HeroSection } from "@/components/HeroSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
 
 export default function Home() {
   return (
@@ -20,10 +18,7 @@ Que vous soyez jeune ou moins jeune, sportif ou contemplatif, venez vivre ce tem
           secondaryActionTitle="Voir la FAQ"
           secondaryActionHref={FAQ_URL}
         />
-        <NewsletterSection
-          title="Besoin de rester informé ? Inscrivez-vous a la newsletter."
-          onSubmit={() => alert("Dev en cours")}
-        />
+
         <FAQ
           title="Foire aux questions"
           entries={faqs}

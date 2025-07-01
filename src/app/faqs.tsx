@@ -20,6 +20,6 @@ export const faqs: FAQEntry[] = [
   {
     id: 4,
     question: "Qui contacter en cas de question ?",
-    answer: "pelerinage-ablis@gmail.com",
+    answer: "pelerinage.ablis@gmail.com",
   },
 ];
