@@ -12,7 +12,7 @@ export default function Home() {
           title="Pélerinage du groupement paroissial d'Ablis"
           description="Une journée pour marcher ensemble, prier ensemble, avancer ensemble vers la Cathédrale Saint-Louis de Versailles.
 Que vous soyez jeune ou moins jeune, sportif ou contemplatif, venez vivre ce temps fort de foi et de fraternité à travers l’un des trois parcours accessibles à tous."
-          pictureSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Cath%C3%A9drale_Saint_Louis_-_Versailles_%28FR78%29_-_2024-06-08_-_16.jpg/1920px-Cath%C3%A9drale_Saint_Louis_-_Versailles_%28FR78%29_-_2024-06-08_-_16.jpg"
+          pictureSrc="/images/cathedrale-saint-louis.jpg"
           pictureAlt="Cathédrale Saint-Louis"
           mainActionTitle="S'inscrire"
           secondaryActionTitle="Voir la FAQ"
